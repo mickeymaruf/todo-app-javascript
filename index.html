@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo - App</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.25.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!--  -->
+    <div id="warning" class="toast toast-top toast-center hidden">
+        <div class="alert alert-warning w-60">
+            <div class="flex justify-between w-full">
+                <span>Task can't be empty!</span>
+                <span onclick="xrossAlert()" class="cursor-pointer">&#10005;</span>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <section class="flex justify-center items-center h-screen">
+        <div class="w-[85%] sm:w-[75%] md:w-[60%] lg:w-[40%] xl:w-1/4 relative">
+            <input id="task-field" type="text" placeholder="Type here" class="input input-bordered input-primary w-full"/>
+            <svg onclick="addTodo()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute top-0 right-3 translate-y-1/2 cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            <ul id="todos" class="mt-5 grid gap-3">
+                
+            </ul>
+            <ul id="todos-completed" class="mt-8 grid gap-3">
+                
+            </ul>
+            <button id="clear-btn" class="btn mt-3 w-full" onclick="clearCompletedTodos()">Clear</button>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
