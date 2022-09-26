@@ -1,1 +1,1 @@
-(https://mickeymaruf.github.io/todo-app-javascript/)
+https://mickeymaruf.github.io/todo-app-javascript/
